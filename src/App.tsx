@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
-import GlobalStyle from './styles/GlobalStyle';
+import { GlobalStyle } from './styles/GlobalStyle';
 import AppRoutes from './routes/AppRoutes';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
