@@ -1,10 +1,14 @@
 import Hero from '@/components/Hero/Hero';
+import PageContainer from '@/components/UI/Container/Container';
 
 const HomePage = () => {
   return (
-    <main>
+    <>
       <Hero />
-    </main>
+      <PageContainer>
+        {/* Здесь будет дополнительный контент главной страницы */}
+      </PageContainer>
+    </>
   );
 };
 

@@ -1,23 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
+import GlobalStyle from './styles/GlobalStyle';
+import AppRoutes from './routes/AppRoutes';
 import Header from './components/Header/Header';
-import HomePage from './pages/HomePage/HomePage';
-import TrainersPage from './pages/TrainersPage/TrainersPage';
-import NewsPage from './pages/NewsPage/NewsPage';
-import LoginPage from './pages/LoginPage/LoginPage';
-import SignUpPage from './pages/SignUpPage/SignUpPage';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/trainers" element={<TrainersPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router>
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 };
 

@@ -11,6 +11,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+`;
+
+export const ContentWrapper = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const SubTitle = styled.h3`
